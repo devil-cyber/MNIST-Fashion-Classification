@@ -46,15 +46,7 @@ def show_images(imgs,num_rows,num_cols,title=None,scale=1.5):
 	cols[2].image(imgs[2].asnumpy(),width=100,caption=title[2])
 	cols[3].image(imgs[3].asnumpy(),width=100,caption=title[3])
 	cols[4].image(imgs[4].asnumpy(),width=100,caption=title[4])
-	cols[5].image(imgs[5].asnumpy(),width=100,caption=title[5])
-
-
-
-
-
-
-
-   
+	cols[5].image(imgs[5].asnumpy(),width=100,caption=title[5])   
 def softmax(X):
     X_exp = np.exp(X)
     num_sum = X_exp.sum(1,keepdims=True)
