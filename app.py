@@ -55,6 +55,9 @@ if __name__ == '__main__':
 			start_predict=True
 	if start_predict:
 		predict(model,test_iter,n=6)
+	st.write(
+        f"<a style='text-align:center' href='https://github.com/devil-cyber/MNIST-Fashion-Classification'>Github</a>",
+        unsafe_allow_html=True,)
 
  	# run(model,train_iter,cross_entropy,num_epochs,updater)
  	# 
