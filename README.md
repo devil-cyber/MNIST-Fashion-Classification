@@ -23,3 +23,7 @@ streamlit run app.py
 Note: app will start at http://localhost:8501
  
 ```
+
+it look like:
+
+![](https://github.com/devil-cyber/asset/raw/main/screen-capture-5.gif)
