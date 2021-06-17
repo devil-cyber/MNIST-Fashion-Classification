@@ -2,6 +2,7 @@ import streamlit as st
 from main import *
 from mxnet import npx
 from d2l import mxnet as d2l
+from stqdm import stqdm
 import time
 npx.set_np()
 
@@ -16,13 +17,11 @@ num_epochs = 1
 
 
 def run(model,train_iter,loss,num_epochs,updater,lr):
-	
-	for epoch in range(num_epochs):
-        
+	for epoch in stqdm(range(num_epochs)):
 		train_metric=train_epoch(model,train_iter,loss,updater,lr)
 		test_acc=evalute_accuracy(model,test_iter)
 	train_loss,train_acc=train_metric
-	st.success(f'test_acc:[{test_acc:.2f}, train_acc:{train_acc:.2f}, loss:{train_loss:.2f}]')
+	st.success(f'[test_acc:{test_acc:.2f}, train_acc:{train_acc:.2f}, loss:{train_loss:.2f}]')
     
 
 
