@@ -91,7 +91,7 @@ def train_epoch(model,train_iter,loss,updater,lr): #@save
             l=loss(y_hat,y)
         l.backward()
         updater(X.shape[0],lr)
-        metric.add(l.sum(),accuracy(y_hat,y),y.size)
-        return metric[0]/metric[2],metric[1]/metric[2]
+        metric.add(float(l.sum()),accuracy(y_hat,y),y.size)
+    return metric[0]/metric[2],metric[1]/metric[2]
 
 
